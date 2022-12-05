@@ -326,6 +326,17 @@
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
     border: 1px solid #05101D;
   }
+  .videoSquare{
+    position: relative;
+    border: 0px;
+    border-radius: 32px;
+    width: calc(192vw / 4);
+    height: calc(192vw / 4);
+    opacity: 0;
+    transform: translatey(1000px);
+    animation: 0.7s swift-box ease-in-out forwards 0.1s;
+    border: 1px solid #05101D;
+  }
 
   .video2{
     position: relative;
@@ -349,6 +360,19 @@
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
     border: 1px solid #05101D;
   }
+
+  .video4{
+    position: relative;
+    border: 0px;
+    border-radius: 16px;
+    width: calc(145vw / 2.7);
+    height: calc(108vw / 2.7);
+    opacity: 0;
+    transform: translatey(1000px);
+    animation: 0.7s swift-box ease-in-out forwards 0.1s;
+    border: 1px solid #05101D;
+  }
+
 
   .img{
     display: inline-block;
