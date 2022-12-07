@@ -302,7 +302,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto auto auto auto;
-    grid-template-rows: 48px auto 128px auto auto 950px 64px; 
+    grid-template-rows: 48px auto 0px auto auto 950px 64px; 
     grid-template-areas:
       "nav nav nav nav nav nav nav nav nav nav nav nav"
       "backButton projectName projectName projectName projectName projectName projectName projectName photo photo projectData projectData"
@@ -678,11 +678,11 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 48px auto 64px auto auto auto 80vw 64px; 
+    grid-template-rows: 48px auto auto auto auto auto 80vw 64px; 
     grid-template-areas:
       "nav nav nav nav nav nav nav nav nav nav nav nav"
       "projectName projectName projectName projectName projectName projectName projectName projectName projectName projectName projectName projectName"
-      "tags tags tags tags tags tags tags tags tags tags tags tags"
+      "photo photo photo photo photo photo photo photo photo photo photo photo"
       "mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
       "section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1"
       "footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1"
@@ -730,6 +730,18 @@
   }
   #section1{
     padding-left: 7vw;
+  }
+
+  .myImg{
+    display: inline-block;
+    border-radius: 16px;
+    float: left;
+    margin-left: 7vw;
+    opacity: 0;
+    transform: translatey(1000px);
+    animation: 0.7s swift-box ease-in-out forwards 0.4s;
+    border: 1px solid #05101D;
+    width: 60vw;
   }
 
   .projectTag{

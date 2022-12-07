@@ -83,7 +83,7 @@
     width: calc((100vw/13)*3);
     /* border: 1px solid  var(--main-white); */
     display:inline-block;
-    margin: 2vw;
+    margin: 1.67vw;
     transform: translatey(1000px);
     animation: 0.6s swift-box ease-in-out forwards;
   }
@@ -212,7 +212,7 @@
 
 
   .projectTag{
-    font-size: 22px;
+    font-size: 1.4vw;
     padding-left: var(--main-padding);
     padding-right: var(--main-padding);
     margin-top: var(--main-padding);
