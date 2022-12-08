@@ -185,6 +185,10 @@
     
   }
 
+  #word12, #word13{
+    font-size:32px;
+  }
+
 
 
   .vl{
@@ -313,6 +317,11 @@
       "footer footer footer footer footer footer footer footer3 footer3 footer3 footer3 footer3";
     grid-gap: 0px;
     color:  var(--main-white);
+  }
+
+  .smallLink{
+    font-size: 16px;
+    text-decoration: underline;
   }
 
   .video{
@@ -627,6 +636,8 @@
 .textWrapperInline{
   width:96%
 }
+
+#word12, #word13 {font-size:2vw}
 
 
 
