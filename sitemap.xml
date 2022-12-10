@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>http://manuelreale.com/index.html</loc>
+  <priority>1</priority>
+</url>
+<url>
+  <loc>http://manuelreale.com/work.html</loc>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>http://manuelreale.com/about.html</loc>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/tjt.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/flow.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/intertwined.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/aria.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/pastachute.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/oikia.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/io.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/aspire.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/ema.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/artu.html</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://manuelreale.com/dolomiti.html</loc>
+  <priority>0.8</priority>
+</url>
+</urlset>
