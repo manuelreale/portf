@@ -15,8 +15,156 @@ btw here is a cute cat
 ⠀
 
  -->
- 
- <!doctype html><html id="html" lang="en"><head><link rel="icon" type="image/png" sizes="32x32" href="/favicon-for-dark-mode.png" media="(prefers-color-scheme: dark)"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-for-light-mode.png" media="(prefers-color-scheme: light)"/><title>About Me</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><script defer="defer" src="about.js"></script><link href="about.css" rel="stylesheet"></head><body><div class="container"><nav style="z-index: 1;"><div><a id="navElements" href="./index.html" style="text-align:left" class="hoverable">manuelreale.com</a><div style="float:right;"><a id="navElements" style="font-family: MisterPixel; font-weight: bold; padding-right: 3vw; padding-left: 3vw; z-index: 100;" class="hoverable" onmousedown="lightMode()">X</a> <a id="navElements" href="./work.html" style="padding-right: 3vw; padding-left: 3vw; z-index: 100;" class="hoverable">Work</a> <a id="navElements" href="./about.html" style="padding-left: 3vw; z-index: 100;" class="hoverable">About</a></div></div></nav><div id="backButton"><span><div class="backButton hoverable" onclick="history.back()">À</div></span></div><div id="projectName"><span><h1 id="projectNameText">About me</h1><h1 style="margin-top:2vw" class="Symbols"><b class="Blue">P</b></h1></span></div><div id="photo"><img class="myImg" src="./img/me.jpeg"></div><div id="projectData"><p id="dataText"><b>LINK/FILES</b><br>Resume.pdf<br>Portfolio.pdf<br><br></p></div><div id="mainContent"><div class="textWrapperInline"><p class="description"><b>WHO AM I?</b><br>Hi! I am Manuel, I'm a Digital and Interaction Design student at Politecnico di Milano. I've always been very curious and liked to learn and tinker with everything; this allowed me to gain wide theoretical and practical knowledge across multiple fields as well as developing a problem solving attitude.<br>I like designing meaningful products/systems/experiences that <mark>support and amuse</mark> people by integrating effective interactions and the right technologies.<br><br>I also like videogames, space exploration and technology └[∵┌]<br><br><br><br></p></div></div><div id="section1"><hr style="top: 0px; padding:0px; margin-bottom: 2vw;"><div class="textWrapper"><p class="description"><b>EDUCATION</b><br><br><b>M.S. in Digital and Interaction Design</b><br>Politecnico di Milano, Italy<br>2021-Present<br><br><b>B.S. in Communication Design (July 2021) -</b> 110/110<br>Politecnico di Milano, Italy<br>2018-2021<br><br><b>Scientific High School - Applied Sciences (July 2018)</b><br>Enrico Fermi Arona, Italy<br>2013-2018<br><br></p></div><hr style="top: 0px; padding:0px; margin-bottom: 2vw;"><div class="textWrapper"><p class="description"><b>EXPERIENCES</b><br><br><b>Freelance 3D Artist</b><br>2021-Present<br><br><b>Freelance Video Editor</b><br>2019-2021<br><br></p></div></div><div id="footer1" style="z-index: 1;"><span><h1 class="Symbols" id="word5"><b class="Blue">7</b>+<b class="Blue">T</b>=<b class="Blue">2</b></h1></span><br><span><h1 style="padding-top:40px;" id="word6">Do You Have</h1></span><br><span><h1 id="word7">Something in</h1></span><br><span><h1 id="word8">Mind?</h1></span><br><span><div onclick="window.location = 'mailto:manuel.reale2000@gmail.com'" id="word9" class="button" style="display: inline-block; transform: translatey(80px);"><h3 style="display: inline-block; padding-right: 40px;margin-top: 12px;margin-bottom: 12px;">Let's Chat</h3></div></span></div><div id="footer2" style="z-index: 1; display: flex; align-items: flex-end;"><div style="margin-bottom: 80px;"><span><p id="word10" style="margin-bottom: 0px;">Milan, Italy</p></span><br><br><span><p id="word11" style="margin-bottom: 0px;">Contact me</p></span><br><span><a href="mailto: manuel.reale2000@gmail.com" id="word12" class="hoverable" style="text-decoration:underline; display: inline-block; transform: translatey(100px);">manuel.reale2000@gmail.com</a></span><br><span><a href="tel:+393283116701" id="word13" class="hoverable" style="text-decoration:underline; display: inline-block; transform: translatey(100px);">3283116701</a></span></div></div><footer style="display: flex; align-items: center;"><a href="https://www.behance.net/manuelreale" target="_blank" id="social" class="hoverable">BEHANCE</a> <a href="https://www.linkedin.com/in/manuelreale/" target="_blank" id="social" class="hoverable">LINKEDIN</a> <a href="https://www.youtube.com/@manuelreale/" target="_blank" id="social" class="hoverable">YOUTUBE</a></footer><div id="footer3" style="display: flex; align-items: center;">Copyright © 2022 Manuel Reale</div></div></body><script>if(!localStorage.getItem('mode')){localStorage.setItem('mode', 0);}
+
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-for-dark-mode.png" media="(prefers-color-scheme: dark)"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-for-light-mode.png" media="(prefers-color-scheme: light)"/>
+    <meta name="description" content="Hi! I am Manuel Reale, I'm a 22 years old Interaction Designer, I design meaningful user experiences mixing effective interactions and the right technologies">
+    <title>About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script defer src="about.js"></script><link href="about.css" rel="stylesheet"></head>
+
+
+<body>
+    <!-- <div id="loadOverlay">
+        <p id='loadText' style="color:#ffffff; top:40%; position:absolute"></p>
+        <div class="loadingBar"></div>
+    </div> -->
+    
+<div class="container">
+
+    <nav style="z-index: 1;">
+        <div>
+            <a id="navElements" href="./index.html" style="text-align:left" class="hoverable">manuelreale.com</a>
+            <div style="float:right;">
+                <a id="navElements"  style="font-family: MisterPixel; font-weight: bold; padding-right: 3vw; padding-left: 3vw; z-index: 100; " class="hoverable" onmousedown="lightMode()">X</a>
+                <a id="navElements" href="./work.html" style=" padding-right: 3vw; padding-left: 3vw; z-index: 100;" class="hoverable">Work</a>
+                <a id="navElements" href="./about.html" style=" padding-left: 3vw; z-index: 100; " class="hoverable">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="backButton">
+        <span>
+        <div class="backButton hoverable"  onclick="history.back()">À</div>
+        </span>
+    </div>
+    <div id="projectName">
+        <span>
+            <h1 id="projectNameText">About me</h1>
+            <h1  style="margin-top:2vw" class= "Symbols"><b class="Blue"> P</b></h1>
+        </span>
+    </div>
+    <div id="photo">
+        <img class='myImg' src="./img/me.jpeg"> 
+    </div>
+
+    <div id="projectData">
+
+        <p id="dataText">
+            <b>LINK/FILES</b><br>
+            Resume.pdf<br>
+            Portfolio.pdf<br>
+            <br>
+        </p>
+
+    </div>
+
+    <div id="mainContent">
+        <div class='textWrapperInline'>
+            <p class="description">
+                <b>WHO AM I?</b><br>
+                Hi! I am Manuel, I'm a Digital and Interaction Design student at Politecnico di Milano.
+                I've always been very curious and liked to learn and tinker with everything; this allowed me to gain wide theoretical and 
+                practical knowledge across multiple fields as well as developing a problem solving attitude.<br>
+                I like designing meaningful products/systems/experiences that <mark>support and amuse</mark> people 
+                by integrating effective interactions and the right technologies.<br><br>
+                I also like videogames, space exploration and technology └[∵┌]
+                
+                <br><br><br><br>
+            </p>
+        </div>
+        
+
+    </div>
+    <div id="section1">
+
+        <hr style="top: 0px; padding:0px; margin-bottom: 2vw;">
+        <div class='textWrapper'>
+            <p class="description">
+            <b>EDUCATION</b><br><br>
+
+            <b>M.S. in Digital and Interaction Design</b><br>
+            Politecnico di Milano, Italy<br>
+            2021-Present<br>
+            <br>
+            <b>B.S. in Communication Design (July 2021) -</b> 110/110<br>
+            Politecnico di Milano, Italy<br>
+            2018-2021<br>
+            <br>
+            <b>Scientific High School - Applied Sciences (July 2018)</b><br>
+            Enrico Fermi Arona, Italy<br>
+            2013-2018<br>
+            <br>
+
+            </p>
+        </div>
+
+        <hr style="top: 0px; padding:0px; margin-bottom: 2vw;">
+
+        <div class='textWrapper'>
+            <p class="description">
+            <b>EXPERIENCES</b><br><br>
+
+            <b>Freelance 3D Artist</b><br>
+            2021-Present<br>
+            <br>
+            <b>Freelance Video Editor</b><br>
+            2019-2021<br>
+            <br>
+
+
+            </p>
+        </div>
+
+
+
+    </div>
+   
+    <div id="footer1" style="z-index: 1;">
+        <span><h1 class="Symbols" id="word5"><b class="Blue">7</b>+<b class="Blue">T</b>=<b class="Blue">2</b></h1></span><br>
+        <span><h1 style="padding-top:40px;" id="word6">Do You Have</h1></span><br>
+        <span><h1 id="word7">Something in</h1></span><br>
+        <span><h1 id="word8">Mind?</h1></span><br>
+        <span><div onclick="window.location = 'mailto:manuel.reale2000@gmail.com'" id="word9" class="button" style="display: inline-block; transform: translatey(80px);"><h3 style="display: inline-block; padding-right: 40px;margin-top: 12px;margin-bottom: 12px;">Let's Chat</h3></div></span>
+    </div>
+    
+    <div id="footer2" style="z-index: 1; display: flex; align-items: flex-end;">
+        <div style="margin-bottom: 80px;">
+            <span><p id="word10" style="margin-bottom: 0px;">Milan, Italy</p></span><br><br>
+            <span><p id="word11" style="margin-bottom: 0px;">Contact me</p></span><br>
+            <span><a href = "mailto: manuel.reale2000@gmail.com" id="word12" class="hoverable" style=" text-decoration:underline; display: inline-block; transform: translatey(100px);">manuel.reale2000@gmail.com</a></span><br>
+            <span><a href = "tel:+393283116701" id="word13" class="hoverable" style=" text-decoration:underline; display: inline-block; transform: translatey(100px);">3283116701</a></span>
+        </div>
+    </div>
+
+    <footer style="display: flex; align-items: center;">
+        <a href="https://www.behance.net/manuelreale" target="_blank" id="social" class="hoverable">BEHANCE</a>
+        <a href="https://www.linkedin.com/in/manuelreale/" target="_blank" id="social" class="hoverable">LINKEDIN</a>
+        <a href="https://www.youtube.com/@manuelreale/" target="_blank" id="social" class="hoverable">YOUTUBE</a>
+    </footer>
+    <div id="footer3" style="display: flex; align-items: center;">Copyright © 2022 Manuel Reale</div>
+</div>
+
+
+
+</body>
+
+<script>
+    if(!localStorage.getItem('mode')){localStorage.setItem('mode', 0);}
     updateMode()
 
     function updateMode(){
@@ -41,4 +189,12 @@ btw here is a cute cat
             localStorage.setItem('mode', 0);
             updateMode()
         }
-    }</script><script src="./pointer.js"></script></html>
+    }
+
+</script>
+
+<script src="./pointer.js"></script>
+<!-- <script src="./script.js"></script> -->
+
+
+</html>
