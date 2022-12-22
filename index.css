@@ -1123,6 +1123,38 @@ li {
   }
 
 }
+
+/* tiny phones */
+@media only screen and (max-width: 380px) 
+{
+h1 {
+  font-size:7vw;
+}
+
+.Clickable{font-size:7vw;}
+.Clickable:hover{font-size:7vw;}
+.Clickable:visited{font-size:7vw;}
+
+:root {
+--main-padding: 0.3rem;
+--big-padding: 1.5rem;
+}
+
+.word-4, .word-5, .word-6 {
+margin-top: -3vw;
+}
+
+
+p{
+  font-size: 3vw;
+  line-height: 1vw;
+}
+
+#word-2.1{
+  margin-left:-2vw;
+}
+
+}
 /* 
     This CSS file was created by OwL for use by pointer.js, 
      witch can be found on https://seattleowl.com. 
