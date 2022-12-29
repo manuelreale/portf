@@ -450,7 +450,7 @@
 
   li{
     margin: 8px;
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 0px;
     line-height: 32px;
     padding-bottom: 6px;
@@ -722,8 +722,8 @@
     }
     .Symbols-static{
         font-size: 3.5vw;
-        top:-1.5vw;
-        right: -2vw;
+        margin-top: 2.6vw;
+        right: -10px;
     }
     #skill1, #skill2, #skill3{
         padding-left:1vw;
