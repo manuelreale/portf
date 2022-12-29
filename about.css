@@ -683,13 +683,14 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 48px auto auto auto auto auto 80vw 64px; 
+    grid-template-rows: 48px auto auto auto auto auto auto 80vw 64px; 
     grid-template-areas:
       "nav nav nav nav nav nav nav nav nav nav nav nav"
       "projectName projectName projectName projectName projectName projectName projectName projectName projectName projectName projectName projectName"
       "photo photo photo photo photo photo photo photo photo photo photo photo"
       "mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent"
       "section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1"
+      "projectData projectData projectData projectData projectData projectData projectData projectData projectData projectData projectData projectData"
       "footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1"
       "footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2"
       "footer footer footer footer footer footer footer footer3 footer3 footer3 footer3 footer3";
@@ -697,19 +698,29 @@
     color:  var(--main-white);
   }
 
+
+  #projectData {
+    grid-area: projectData;
+    border: 0px solid var(--main-white);
+    border-top: 1px solid var(--main-white);
+    padding-left: var(--big-padding);
+    padding-right: var(--big-padding);
+    padding-top: var(--main-padding);
+    
+    /* display: none; */
+  }
+  #dataText{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 3.2vw;
+    line-height: 5vw;
+  }
+
   .smallLink{
     font-size: 3.2vw;
     line-height: 6vw;
   }
 
-  #projectData {
-    grid-area: projectData;
-    border-left: 1px solid var(--main-white);
-    padding-left: var(--big-padding);
-    padding-right: var(--big-padding);
-    padding-top: var(--main-padding);
-    display: none;
-  }
 
   #backButton {
     display: none;
