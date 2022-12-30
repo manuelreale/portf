@@ -351,8 +351,8 @@
     position: relative;
     border: 0px;
     border-radius: 16px;
-    width: calc(172vw / 2.4);
-    height: calc(90vw / 2.4);
+    width: 96%;
+    height: auto;
     opacity: 0;
     transform: translatey(1000px);
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
@@ -623,6 +623,23 @@
 @media only screen and (max-width: 1600px) 
 {
 
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto auto;
+    grid-template-rows: 48px auto 128px auto auto 57vw 64px; 
+    grid-template-areas:
+      "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "backButton projectName projectName projectName projectName projectName projectName projectName projectName projectName projectData projectData"
+      ". tags tags tags tags tags tags tags tags tags projectData projectData"
+      ". mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent projectData projectData"
+      ". section1 section1 section1 section1 section1 section1 section1 section1 section1 projectData projectData"
+      "footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer2 footer2 footer2 footer2 footer2"
+      "footer footer footer footer footer footer footer footer3 footer3 footer3 footer3 footer3";
+    grid-gap: 0px;
+    color:  var(--main-white);
+  }
+
   #backButton {
     grid-area: backButton;
     padding: 1.5vw;
@@ -794,8 +811,8 @@
     position: relative;
     border: 0px;
     border-radius: 16px;
-    width: calc(192vw / 2.3);
-    height: calc(108vw / 2.3);
+    width: 92%;
+    height: auto;
     opacity: 0;
     transform: translatey(1000px);
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
@@ -806,8 +823,8 @@
     position: relative;
     border: 0px;
     border-radius: 32px;
-    width: calc(192vw / 2.3);
-    height: calc(192vw / 2.3);
+    width: 92%;
+    height: auto;
     opacity: 0;
     transform: translatey(1000px);
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
@@ -818,8 +835,8 @@
     position: relative;
     border: 0px;
     border-radius: 16px;
-    width: calc(172vw / 2);
-    height: calc(90vw / 2);
+    width: 92%;
+    height: auto;
     opacity: 0;
     transform: translatey(1000px);
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
@@ -829,8 +846,8 @@
     position: relative;
     border: 0px;
     border-radius: 16px;
-    width: calc(192vw / 2.3);
-    height: calc(108vw / 2.3);
+    width: 92%;
+    height: auto;
     opacity: 0;
     transform: translatey(1000px);
     animation: 0.7s swift-box ease-in-out forwards 0.1s;
@@ -841,8 +858,8 @@
     position: relative;
     border: 0px;
     border-radius: 16px;
-    width: calc(145vw / 1.7);
-    height: calc(108vw / 1.7);
+    width: 92%;
+    height: auto;
     opacity: 0;
     transform: translatey(1000px);
     animation: 0.7s swift-box ease-in-out forwards 0.1s;

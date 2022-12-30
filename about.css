@@ -315,6 +315,8 @@
     color:  var(--main-white);
   }
 
+  #word12, #word13 {font-size:32px}
+
   .smallLink{
     font-size: 16px;
     text-decoration: underline;
@@ -598,6 +600,25 @@
 /* small computer */
 @media only screen and (max-width: 1600px) 
 {
+
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto auto auto auto;
+    grid-template-rows: 48px auto 0px auto auto 57vw 64px; 
+    grid-template-areas:
+      "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "backButton projectName projectName projectName projectName projectName projectName projectName photo photo projectData projectData"
+      ". tags tags tags tags tags tags tags photo photo projectData projectData"
+      ". mainContent mainContent mainContent mainContent mainContent mainContent mainContent photo photo projectData projectData"
+      ". section1 section1 section1 section1 section1 section1 section1 section1 section1 projectData projectData"
+      "footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer2 footer2 footer2 footer2 footer2"
+      "footer footer footer footer footer footer footer footer3 footer3 footer3 footer3 footer3";
+    grid-gap: 0px;
+    color:  var(--main-white);
+  }
+
+  #word12, #word13 {font-size:2vw}
 
   #backButton {
     grid-area: backButton;

@@ -665,6 +665,34 @@
 /* small computer */
 @media only screen and (max-width: 1600px) 
 {
+
+  .container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 48px auto 80px 800px 64px auto 50vw 64px; 
+    grid-template-areas:
+      "nav nav nav nav nav nav nav nav nav nav nav nav"
+      "mainText mainText mainText mainText mainText mainText mainText illustration illustration illustration illustration illustration"
+      "myskills myskills myskills myskills myskills myskills myskills myskills myskills myskills myskills myskills"
+      "skill1 skill1 skill1 skill1 skill2 skill2 skill2 skill2 skill3 skill3 skill3 skill3"
+      "myprojects myprojects myprojects myprojects myprojects myprojects myprojects myprojects myprojects myprojects myprojects myprojects"
+      "projects projects projects projects projects projects projects projects projects projects projects projects"
+      "footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer2 footer2 footer2 footer2 footer2"
+      "footer footer footer footer footer footer footer footer3 footer3 footer3 footer3 footer3";
+    grid-gap: 0px;
+    color:  var(--main-white);
+  }
+
+  #number{
+    top:-2vw;
+    font-size:2vw;
+  }
+
+  #project7{
+    padding-bottom: 23px;
+  }
+  
     h1{
         font-size: 5vw; 
     }
@@ -916,7 +944,7 @@ h3 {
 }
 .Symbols-static{
     font-size: 7vw;
-    top:-4.5vw;
+    margin-top: 6.6vw;
     right: -2vw;
 }
 #skill1, #skill2, #skill3{

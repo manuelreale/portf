@@ -90,7 +90,7 @@ btw here is a cute cat
     </div>
 
     <div id="mainContent">
-        <video poster="./vid/artu.png"class='video4' width="320" height="240" autoplay controls >
+        <video onloadstart="this.volume=0.2" poster="./vid/artu.png"class='video4' width="320" height="240" autoplay controls >
             <source src="./vid/artu.mp4" type="video/mp4">
         </video>
         <div class='textWrapper'>
@@ -168,14 +168,14 @@ btw here is a cute cat
     function updateMode(){
         var r = document.querySelector(':root');
         if(localStorage.getItem('mode')==0){
-            r.style.setProperty('--main-blue', '#107BFF'); 
-            r.style.setProperty('--main-black', '#ffffff');
-            r.style.setProperty('--main-white', '#444444');
+            r.style.setProperty('--main-blue', '#00FFB2'); 
+            r.style.setProperty('--main-black', '#05101D');
+            r.style.setProperty('--main-white', 'whitesmoke');
 
         }else{
-            r.style.setProperty('--main-blue', '#0057FF'); 
+            r.style.setProperty('--main-blue', '#107BFF'); 
             r.style.setProperty('--main-black', '#F6F7F8');
-            r.style.setProperty('--main-white', '#121212');
+            r.style.setProperty('--main-white', '#444444');
         }
     }
 
