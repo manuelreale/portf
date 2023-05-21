@@ -57,6 +57,7 @@
     font-style: normal;
   }
 
+
   ::-moz-selection { /* Code for Firefox */
     color:  var(--main-black);
     background: var(--main-blue);

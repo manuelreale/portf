@@ -662,6 +662,13 @@
     pointer-events: none;
 }
 
+/* @media only screen and (min-width: 2560px) {
+.container {
+margin-left: calc((100vw - 2560px)/2);
+margin-right: calc((100vw - 2560px)/2);
+}
+} */
+
 /* small computer */
 @media only screen and (max-width: 1600px) 
 {
@@ -813,6 +820,9 @@
       "footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1 footer1"
       "footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2 footer2"
       "footer footer footer footer footer footer footer footer3 footer3 footer3 footer3 footer3";
+
+      width: 100vw;
+      overflow: hidden;
 }
 
 .webgl
@@ -820,6 +830,11 @@
     margin-top: 0px;
     top:75vw;
     left:0px;
+}
+
+#footer1{
+  width: 100vw;
+  overflow: hidden;
 }
 
 #navElements{
