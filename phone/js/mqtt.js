@@ -24,8 +24,7 @@ constructor() {
         this.client.onMessageArrived = this.onMessageArrived;
 
         this.client.connect({
-            onSuccess: () => this.onConnect(),
-            useSSL: true
+            onSuccess: () => this.onConnect()
     //        userName: userId,
     //       passwordId: passwordId
         });
