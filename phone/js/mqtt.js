@@ -3,7 +3,7 @@ export class MQTT {
 constructor() {
     this.clientID = "clientID - "+parseInt(Math.random() * 100);
     this.host = "192.168.1.61";
-    this.port = "9002";
+    this.port = "9001";
     this.userId  = "";  
     this.passwordId = "";   
     this.publishTopic = "Connected Worker/fromDevice";
