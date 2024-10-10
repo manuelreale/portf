@@ -1,0 +1,54 @@
+/* THINKING */
+
+.top-loading-bar, .bottom-loading-bar{
+    width:100%;
+    position: relative;
+    top:0;
+}
+
+.ai-loading-bar, .ai-loading-bar::after{
+    /* background: repeating-linear-gradient(to right, #f100ff 0%, blue 50%, #f100ff 100%); */
+    background: repeating-linear-gradient(to right, #ffffff 0%, #370aff 50%, #ffffff 100%);
+    width: 100%;
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: gradient 3s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ai-loading-bar{
+    transition:1s;
+    height:0px;
+    opacity: 0;
+}
+
+.ai-loading-bar::after{
+    content:'';
+    height:20px;
+    filter: blur(35px);
+    width: 120%;
+    margin-left: -10%;
+}
+/* set loading bar height on top loading bar */
+.top-loading-bar--speaking .ai-loading-bar, .bottom-loading-bar--speaking .ai-loading-bar{
+    height:5px;
+    opacity: 1;
+}
+
+.bottom-loading-bar--speaking{
+    margin-bottom: 5px;
+}
+
+@keyframes gradient { 
+    0%   { background-position: 0 0; }
+    100% { background-position: -200% 0; }
+  }
+
+/* HIDDEN */
+.input-container--hidden{
+    transform: translate(0px, 100%);
+}

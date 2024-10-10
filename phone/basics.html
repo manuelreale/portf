@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics - Smart Worker</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script type="module" src="js/basics.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Basics</h1>
+        <button id="takePicture">Take Picture</button>
+        <img id="capturedImage" alt="Captured Image" style="display: none;">
+        <button id="triggerHaptics">Trigger Haptics</button>
+        <button id="lockOrientation">Lock Orientation</button>
+        <button id="setBrightness">Set Brightness</button>
+        <button id="startMicrophone">Start Microphone</button>
+        <button id="stopMicrophone">Stop Microphone</button>
+        <div id="motionValues"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const basics = new Basics();
+            
+            document.getElementById('takePicture').addEventListener('click', () => basics.takePicture());
+            document.getElementById('triggerHaptics').addEventListener('click', () => basics.triggerHaptics());
+            document.getElementById('lockOrientation').addEventListener('click', () => basics.lockOrientation());
+            document.getElementById('setBrightness').addEventListener('click', () => basics.setBrightness(0.5));
+            document.getElementById('startMicrophone').addEventListener('click', () => basics.startMicrophone());
+            document.getElementById('stopMicrophone').addEventListener('click', () => basics.stopMicrophone());
+        });
+    </script>
+</body>
+</html>

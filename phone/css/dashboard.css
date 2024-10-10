@@ -1,0 +1,144 @@
+.dashboard-section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+    z-index: 10000000;
+    transition:1s;
+    overflow: hidden;
+}
+.dashboard-section--hidden {
+    opacity: 0;
+    filter: blur(10px);
+}
+.dashboad-left, .dashboard-right {
+    height: 100vh;
+}
+.dashboard-right{
+    width:100%;
+}
+
+/* APP ICONS */
+.dashboard-apps {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 0.35s;
+}
+
+.dashboard-app {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    transform: scale(0.85);
+    transition: 0.35s;
+}
+
+.dashboard-app:first-child{
+        margin-top: calc(50vh - 60px);
+}
+
+.dashboard-app--active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.dashboard-app--tasks{
+    background: linear-gradient(135deg, #2fb700, #32ff9e);
+}
+.dashboard-app--ai{
+    background: linear-gradient(135deg, #6510ff, #3264ff);
+}
+.dashboard-app--timer{
+    background: linear-gradient(135deg, #008cff, #73e6ff);   
+}
+.dashboard-app--lamp{
+    background: linear-gradient(135deg, #db9d00, #fdff62);
+}
+
+.dashboad-app-icon{
+    width:80px;
+    height:80px;
+    background-image: url('../assets/icon-dash-ai.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dashboad-app-icon--tasks{
+    background-image: url('../assets/icon-dash-tasks.svg');
+}
+.dashboad-app-icon--ai{
+    background-image: url('../assets/icon-dash-ai.svg');
+}
+.dashboad-app-icon--timer{
+    background-image: url('../assets/icon-dash-timer.svg');
+}
+.dashboad-app-icon--lamp{
+    background-image: url('../assets/icon-dash-lamp.svg');
+}
+
+/* DASHBOARD PAGES */
+.dashboard-pages {
+    transition: 0.5s;
+}
+
+.dashboard-page {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    padding-left:0px;
+    box-sizing: border-box;
+}
+
+.dashboard-page-content {
+    background-color: #ffffff1a;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+
+/* BACKGROUNDS */
+
+
+.dashboard-background {
+    background: radial-gradient(ellipse 130% 100% at 15% 50%, var(--dash-color), transparent 70%);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transition: --dash-color 2s;
+}
+
+@property  --dash-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #000000;
+}
+
+.dashboard-background--0{
+    --dash-color: #054300;
+}
+.dashboard-background--1{
+    --dash-color: #400aa0;
+}
+.dashboard-background--2{
+    --dash-color: #0a55a0;
+}
+.dashboard-background--3{
+    --dash-color: #625706;
+}
+.dashboard-background--4{
+    --dash-color: #400aa0;
+}

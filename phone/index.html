@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Microsoft Cognitive Services Speech SDK Sample</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- scripts for mqtt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    <script type="module" src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loading-bar.css">
+    <link rel="stylesheet" href="css/chat-actions.css">
+    <link rel="stylesheet" href="css/microphone.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/debug.css">
+    <link rel="stylesheet" href="css/procedure.css">
+    <link rel="stylesheet" href="css/camera.css">
+
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+</head>
+
+<body>
+    <div class="debug-section debug-section--hidden">
+        <button class="debug-left">L</button>
+        <button class="debug-right">R</button>
+        <button class="debug-up">U</button>
+        <button class="debug-down">D</button>
+        <div class="debug-scenario">
+            <button class="debug-dash">H</button>
+            <button class="debug-1">1</button>
+            <button class="debug-2">2</button>
+            <button class="debug-3">3</button>
+            <button class="debug-ok">OK</button>
+        </div>
+    </div>
+    <div class="chat-panel">
+        <div class="top-loading-bar">
+            <div class="ai-loading-bar"></div>
+        </div>
+        <div class="dashboard-section dashboard-section--hidden">
+            <div class="dashboard-background dashboard-background--0"></div>
+            <div class="dashboad-left">
+                <div class="dashboard-apps">
+                    <div class="dashboard-app dashboard-app--tasks dashboard-app--active">
+                        <div class="dashboad-app-icon dashboad-app-icon--tasks"></div>
+                    </div>
+                    <div class="dashboard-app dashboard-app--ai">
+                        <div class="dashboad-app-icon dashboad-app-icon--ai"></div>
+                    </div>
+                    <div class="dashboard-app dashboard-app--timer">
+                        <div class="dashboad-app-icon dashboad-app-icon--timer"></div>
+                    </div>
+                    <div class="dashboard-app dashboard-app--lamp">
+                        <div class="dashboad-app-icon dashboad-app-icon--lamp"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-right">
+                <div class="dashboard-pages">
+                    <div class="dashboard-page">
+                        <div class="dashboard-page-content">page 1</div>
+                    </div>
+                    <div class="dashboard-page">
+                        <div class="dashboard-page-content">page 2</div>
+                    </div>
+                    <div class="dashboard-page">
+                        <div class="dashboard-page-content">page 3</div>
+                    </div>
+                    <div class="dashboard-page">
+                        <div class="dashboard-page-content">page 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="camera-window camera-window--hidden" style="visibility: hidden;">
+            <div class="camera-window-wrapper">
+                <div class="camera-ai-text" id="cameraText">
+                </div>
+                <video class="camera-feed" id="cameraElement" autoplay playsinline muted></video>
+            </div>
+           
+        </div>
+        <div class="procedure-window">
+            <div class="procedure-numbers">
+                <div class="procedure-number procedure-number--active">1</div>
+                <div class="procedure-number">2</div>
+                <div class="procedure-number">3</div>
+                <div class="procedure-number">4</div>
+                <div class="procedure-number">5</div>
+                <div class="procedure-number">6</div>
+            </div>
+            <div class="procedure-pages">
+                <div class="procedure-page procedure-page--collapsed procedure-page--active">
+                    <div class="procedure-title procedure-title--1">Safety checks</div>
+                    <div class="procedure-content">
+                        <div class="procedure-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                        <div class="procedure-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+                    </div>
+                  
+                </div>
+                <div class="procedure-page procedure-page--collapsed">
+                    <div class="procedure-title procedure-title--2">Blow out passages with air</div>
+                    <div class="procedure-content">
+                        <div class="procedure-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                        <div class="procedure-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+                    </div>
+                </div>
+                <div class="procedure-page procedure-page--collapsed">
+                    <div class="procedure-title procedure-title--3">Inspect carburetor piston</div>
+                    <div class="procedure-content">
+                        <div class="procedure-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                        <div class="procedure-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+                    </div>
+                </div>
+                <div class="procedure-page procedure-page--collapsed">
+                    <div class="procedure-title procedure-title--4">Inspect jet needle, retaining clip, needle jet for wear</div>
+                    <div class="procedure-content">
+                        <div class="procedure-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                        <div class="procedure-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+                    </div>
+                </div>
+                <div class="procedure-page procedure-page--collapsed">
+                    <div class="procedure-title procedure-title--5">Inspect floats for deterioration or cracking</div>
+                    <div class="procedure-content">
+                        <div class="procedure-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                        <div class="procedure-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+                    </div>
+                </div>
+                <div class="procedure-page procedure-page--collapsed">
+                    <div class="procedure-title procedure-title--6">Inspect float pin and guide tubes</div>
+                    <div class="procedure-content">
+                        <div class="procedure-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                        <div class="procedure-text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-window popup-window--speaking popup-window--hidden">
+            <div class="popup-window-content">
+                <div class="popup-ai-wrapper popup-ai-wrapper--hidden popup-ai-wrapper--antenna">
+                    <div class="popup-ai-text popup-item popup-item-first popup-item--active" id="popup-antenna"></div>
+                    <div class="popup-ai-image popup-item">
+                        <div class="popup-ai-image-wrapper image" id="antenna-img1">
+                        </div>
+                    </div>
+                    <div class="popup-ai-actions popup-item popup-item-last">
+                         <div class="chat-action-button" id="proceed">close and return</div>
+                    </div>
+                </div>
+                <div class="popup-ai-wrapper popup-ai-wrapper--hidden popup-ai-wrapper--finding">
+                    <div class="popup-ai-finding popup-item popup-item-first popup-item--active">
+                        <div class="finding-banner">
+                            <span>Mission critical finding</span>
+                            <img class="finding-icon" src="assets/icon-danger.svg">
+                        </div>
+                        <div class="finding-text">
+                            <div class="finding-title">Aileron movement restricted</div>
+                            <div class="finding-part">Right Wing Trailing Edge</div>
+                        </div>
+                     
+                    </div>
+                    <div class="popup-ai-image popup-item">
+                        <div class="popup-ai-image-wrapper video" id="finding-vid1">
+                        </div>
+                    </div>
+                    <div class="popup-ai-comment popup-item">
+                        <div class="comment-box">
+                            <div class="comment-title">Comment</div>
+                            <div class="comment-text">The movement of the right aileron is restricted, requiring the plane to be grounded until its fixed.</div>
+                        </div>
+                        <!-- <div class="edit-button"><img class="edit-icon" src="assets/icon-pen.svg"></div> -->
+                    </div>
+                    <div class="popup-ai-actions-buttons popup-item popup-item-last">
+                        <div class="popup-action-buttons">
+                        </div>
+                        <div class="popup-action-microphone">
+                            <img class="chat-action-microphone__icon" src="assets/icon-mic-red.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-window-scrollbar-wrapper">
+                <div class="popup-window-scrollbar">
+                    <div class="popup-window-scrollbar__handle">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-content" id="chat">
+            <div class="ai-text-div">press screen to start</div>
+        </div>
+        <div class="chat-actions chat-actions--startposition">
+            <div class="chat-action-buttons">
+            </div>
+            <div class="chat-action-microphone">
+                <img class="chat-action-microphone__icon" src="assets/icon-mic-red.svg">
+                <div class="chat-action-microphone__text"></div>
+            </div>
+        </div>
+        <div class="bottom-loading-bar">
+            <div class="ai-loading-bar"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

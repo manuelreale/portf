@@ -1,0 +1,71 @@
+
+.debug-section {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1000000000;
+}
+.debug-section--hidden{
+    opacity:0;
+    pointer-events: none;
+}
+button.debug-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100vh;
+  
+    color: #ffffff;
+    border: 2px solid #ffffff2b;
+}
+button.debug-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 100vh;
+   
+    color: #ffffff;
+    border: 2px solid #ffffff2b;
+}
+button.debug-up {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100vw - 160px);
+    margin-left:80px;
+    height: 80px;
+   
+    color: #ffffff;
+    border: 2px solid #ffffff2b;
+}
+button.debug-down {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100vw - 160px);
+    margin-left:80px;
+    height: 80px;
+   
+    color: #ffffff;
+    border: 2px solid #ffffff2b;
+}
+
+.debug-scenario {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100vw - 180px);
+    height: calc(100vh - 180px);
+    margin-top: 90px;
+    margin-left: 90px;
+    display: flex;
+    gap: 10px;
+}
+button.debug-1, button.debug-2, button.debug-3, button.debug-dash, button.debug-ok {
+   
+    color: #ffffff;
+    border: 2px solid #ffffff2b;
+    width:100%;
+}

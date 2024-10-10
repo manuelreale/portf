@@ -1,0 +1,285 @@
+.chat-action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    overflow-x: hidden;
+    padding-left: 40px;
+    width: calc(100% - 70px);
+    padding-right: 40px;
+    height: 60px;
+    transition: 0.5s;
+}
+
+.chat-action-buttons--dimmed {
+    opacity: 0.3;
+}
+
+/* BUTTONS */
+.chat-action-button-group {
+    display: flex;
+    gap: 5px;
+    transition: 0.25s;
+    background-color: #000000;
+    border-radius: 30px;
+}
+
+.chat-action-button {
+    height: var(--height-btn);
+    background-color: var(--color-btn);
+    border-radius: 100px;
+    padding: 0px 30px;
+    font-weight: 500;
+    transition: 0.25s;
+    min-width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-action-button--active {
+    background-color: white;
+    color: black;
+}
+
+.chat-action-button:hover {
+    background: #ffffff40;
+}
+
+.chat-action-button--show {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.chat-action-button--show:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.chat-action-button--show:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.chat-action-button--show:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.chat-action-button--show:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+.chat-action-button--show:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.chat-action-button-dot {
+    background-color: white;
+    border-radius: 100%;
+    margin-right: -55px;
+    transition: 0.25s;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+
+}
+
+.chat-action-button-dot--active {
+    background-color: rgb(255 255 255);
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+
+.chat-actions--send .chat-action-button {
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+.chat-actions--send .chat-action-button-dot {
+    transition-delay: 0s;
+    opacity: 0;
+}
+
+/* SLIDER */
+
+.chat-action-slider {
+    height: var(--height-btn);
+    background-color: var(--color-btn);
+    /* background:linear-gradient(90deg, var(--slider-color-0),var(--slider-color-25), var(--slider-color-50), var(--slider-color-75),var(--slider-color-100)); */
+    /* width: 70%; */
+    border-radius: 100px;
+    padding: 0px 30px;
+    font-weight: 500;
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-action-slider::after {
+    content: '';
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    background: linear-gradient(90deg, var(--slider-color-0), var(--slider-color-25), var(--slider-color-50), var(--slider-color-75), var(--slider-color-100));
+    left: 0;
+    mix-blend-mode: lighten;
+    transition: --slider-color-0 0.25s, --slider-color-25 0.25s, --slider-color-50 0.25s, --slider-color-75 0.25s, --slider-color-100 0.25s, width 1s;
+
+}
+
+.chat-action-slider-dot-wrapper {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.chat-action-slider-dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    z-index: 10000;
+    background-color: white;
+    margin-left: -7.5px;
+    left: 50%;
+    transition: 0.25s;
+}
+
+.slider-label {
+    transition: opacity 0.25s, margin 0.5s;
+}
+
+
+/* GREEN MOVEMENT */
+.chat-action-slider--green.chat-action-slider::after {
+    --slider-color-0: #00CA2C;
+    --slider-color-25: #008B72;
+}
+
+.chat-action-slider--green .chat-action-slider-dot {
+    left: calc(0%);
+    width: 5px;
+    height: 5px;
+    margin-left: 7px;
+    opacity: 0;
+}
+
+.chat-action-slider--green .slider-label--red {
+    opacity: 0.2;
+}
+
+.chat-action-slider--green.chat-action-slider--completed.chat-action-slider::after {
+    --slider-color-0: #00CA2C;
+    --slider-color-25: #00BA3E;
+    --slider-color-50: #00AA50;
+    --slider-color-75: #009A61;
+    --slider-color-100: #008B72;
+}
+
+.chat-action-slider--red.chat-action-slider--completed.chat-action-slider::after {
+    --slider-color-0: #8B004B;
+    --slider-color-25: #9B003E;
+    --slider-color-50: #AB0031;
+    --slider-color-75: #BA0025;
+    --slider-color-100: #CA0018;
+}
+
+.chat-action-slider--completed .chat-action-slider-dot {
+    opacity: 0;
+    /* margin-left:-10px; */
+}
+
+/* RED MOVEMENT */
+
+.chat-action-slider--red.chat-action-slider::after {
+    --slider-color-75: #8B004B;
+    --slider-color-100: #CA0018;
+}
+
+.chat-action-slider--red .chat-action-slider-dot {
+    left: calc(100%);
+    width: 5px;
+    height: 5px;
+    margin-top: 1px;
+    margin-left: -17px;
+    opacity: 0;
+}
+
+.chat-action-slider--red .slider-label--green {
+    opacity: 0.2;
+}
+
+@property --slider-color-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #252525;
+}
+
+@property --slider-color-25 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #252525;
+}
+
+@property --slider-color-50 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #252525;
+}
+
+@property --slider-color-75 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #252525;
+}
+
+@property --slider-color-100 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: #252525;
+}
+
+.mini-action-button {
+    background-color: white;
+    color: black;
+    display: flex;
+    width: fit-content;
+    padding: 9px 23px;
+    border-radius: 30px;
+}
+
+
+.chat-action-wheel {
+    height: var(--height-btn);
+    background-color: var(--color-btn);
+    border-radius: 100px;
+    padding: 0px 10px;
+    font-weight: 500;
+    transition: 0.25s;
+    width: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.chat-action-wheel-item {
+    padding: 10px 16px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.chat-action-wheel-item--active {
+    background: white;
+    color: black;
+}

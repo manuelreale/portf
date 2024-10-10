@@ -1,0 +1,37 @@
+.carousel {
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    /* overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; */
+    opacity:0;
+    pointer-events: none;
+    transition:1s;
+}
+.carousel--shown{
+    opacity:1;
+}
+.carousel-content {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    padding: 40px;
+    transition:0.5s;
+}
+.carousel-content__picture {
+    width: 60vw;
+    height: 30vw;
+    background-color: #5e5e5e;
+    border-radius: 6px;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    scroll-margin:  40px;
+    transition:0.5s;
+}
+
+.carousel--attached .carousel-content .carousel-content__picture{
+
+    box-shadow: 0px 0px 31px 0px #ffffff8f;
+
+}

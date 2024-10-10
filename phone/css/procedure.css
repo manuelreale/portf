@@ -1,0 +1,126 @@
+:root{
+    --procedure-margin: 30px;
+    --procedure-margin-top: 40px;
+}
+  
+
+.procedure-window {
+    position: absolute;
+    z-index: 100000000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    box-sizing: border-box;
+    display:none;
+}
+.procedure-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: var(--procedure-margin);
+    padding-top: var( --procedure-margin-top);
+    transition:0.25s;
+    flex-shrink: 0;
+    height: max-content;
+}
+.procedure-number {
+    width: 26px;
+    height: 26px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-shrink: 0;
+    transition:0.2s;
+}
+.procedure-number--active{
+    background-color: white;
+    color:black;
+}
+
+.procedure-pages {
+    display: flex;
+    flex-direction: column;
+    padding-top: var( --procedure-margin-top);
+    transition: 0.25s;
+    gap: 45px;
+}
+.procedure-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding-top: var( --procedure-margin-top); */
+    padding-right: var(--procedure-margin);
+    height: 70px;
+    overflow: hidden;
+    flex-shrink: 0;
+    opacity:0.2;
+    transition:opacity 0.25s;
+}
+.procedure-page--active{
+    opacity:1;
+}
+.procedure-pages--collapsed .procedure-page> *:not(:first-child) {
+    /* Style properties */
+    opacity: 0;
+    margin-left: 50px;
+}
+.procedure-page:first-child {
+    /* Style properties */
+    color: rgb(255, 255, 255);
+}
+.procedure-content {
+    transition: 0.5s;
+    padding-right: 30px;
+}
+.procedure-title {
+    font-size: 24px;
+    font-weight: 600;
+    min-height: 25px;
+    flex-shrink: 0;
+}
+.procedure-title::before{
+    content:"1";
+    width: 26px;
+    height: 26px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-shrink: 0;
+    transition:0.2s;
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+} 
+.procedure-title--1::before{
+    content:"1";
+}
+.procedure-title--2::before{
+    content:"2";
+}
+.procedure-title--3::before{
+    content:"3";
+}
+.procedure-title--4::before{
+    content:"4";
+}
+.procedure-title--5::before{
+    content:"5";
+}
+.procedure-title--6::before{
+    content:"6";
+}
+.procedure-text {
+    font-size: 18px;
+}
